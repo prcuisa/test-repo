@@ -6,7 +6,7 @@
         "start": "concurrently \"npm run start-server\" \"npm run start-front\" --kill-others --kill-others-on-fail",
         "start-front": "set PORT=3624 && set REACT_APP_API=http://localhost:7645 && react-app-rewired start",
         "start-server": "nodemon server/app.js --watch server/*",
-        "build": "react-app-rewired build",
+        "build": "DISABLE_ESLINT_PLUGIN=true react-app-rewired build",
         "test": "react-app-rewired test",
         "eject": "react-scripts eject"
     },
